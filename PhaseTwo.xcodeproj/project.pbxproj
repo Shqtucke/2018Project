@@ -13,6 +13,10 @@
 		DC015C21201295F400D9690E /* PhaseTwo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DC015C1F201295F400D9690E /* PhaseTwo.xcdatamodeld */; };
 		DC015C23201295F400D9690E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC015C22201295F400D9690E /* Assets.xcassets */; };
 		DC015C26201295F400D9690E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC015C24201295F400D9690E /* LaunchScreen.storyboard */; };
+		DC015C322012B3C200D9690E /* FoodTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC015C312012B3C200D9690E /* FoodTypeVC.swift */; };
+		DC015C342012B73100D9690E /* FoodTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC015C332012B73100D9690E /* FoodTypeCell.swift */; };
+		DC015C362012B97A00D9690E /* FoodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC015C352012B97A00D9690E /* FoodType.swift */; };
+		DC015C382012BA1400D9690E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC015C372012BA1300D9690E /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		DC015C22201295F400D9690E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC015C25201295F400D9690E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC015C27201295F400D9690E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC015C312012B3C200D9690E /* FoodTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTypeVC.swift; sourceTree = "<group>"; };
+		DC015C332012B73100D9690E /* FoodTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTypeCell.swift; sourceTree = "<group>"; };
+		DC015C352012B97A00D9690E /* FoodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodType.swift; sourceTree = "<group>"; };
+		DC015C372012BA1300D9690E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +64,11 @@
 		DC015C17201295F300D9690E /* PhaseTwo */ = {
 			isa = PBXGroup;
 			children = (
+				DC015C302012B38A00D9690E /* Service */,
+				DC015C2F2012B37D00D9690E /* Model */,
+				DC015C2E2012B37200D9690E /* View */,
+				DC015C2D2012B36500D9690E /* Controller */,
 				DC015C18201295F300D9690E /* AppDelegate.swift */,
-				DC015C1A201295F300D9690E /* HomeVC.swift */,
 				DC015C1C201295F300D9690E /* Main.storyboard */,
 				DC015C22201295F400D9690E /* Assets.xcassets */,
 				DC015C24201295F400D9690E /* LaunchScreen.storyboard */,
@@ -65,6 +76,39 @@
 				DC015C1F201295F400D9690E /* PhaseTwo.xcdatamodeld */,
 			);
 			path = PhaseTwo;
+			sourceTree = "<group>";
+		};
+		DC015C2D2012B36500D9690E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DC015C312012B3C200D9690E /* FoodTypeVC.swift */,
+				DC015C1A201295F300D9690E /* HomeVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		DC015C2E2012B37200D9690E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC015C332012B73100D9690E /* FoodTypeCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DC015C2F2012B37D00D9690E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC015C352012B97A00D9690E /* FoodType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC015C302012B38A00D9690E /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DC015C372012BA1300D9690E /* DataService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +184,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC015C21201295F400D9690E /* PhaseTwo.xcdatamodeld in Sources */,
+				DC015C382012BA1400D9690E /* DataService.swift in Sources */,
+				DC015C362012B97A00D9690E /* FoodType.swift in Sources */,
 				DC015C1B201295F300D9690E /* HomeVC.swift in Sources */,
+				DC015C322012B3C200D9690E /* FoodTypeVC.swift in Sources */,
+				DC015C342012B73100D9690E /* FoodTypeCell.swift in Sources */,
 				DC015C19201295F300D9690E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

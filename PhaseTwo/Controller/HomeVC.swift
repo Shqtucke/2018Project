@@ -27,8 +27,8 @@ class HomeVC: UIViewController {
         
         for button in menuButtons {
             button.layer.shadowColor = UIColor.black.cgColor
-            button.layer.shadowOpacity = 0.8
-            button.layer.shadowOffset = CGSize(width: 0.1, height: 0)
+            button.layer.shadowOpacity = 0.3
+            button.layer.shadowOffset = CGSize(width: 0.3 , height: 0)
         }
     }
 
