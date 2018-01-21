@@ -10,7 +10,7 @@ import UIKit
 
 class FoodTypeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
    
-     private(set) public var foodTypes = [FoodType]()
+     private(set) public var FoodTypes = [FoodType]()
     @IBOutlet var restaurantCollection: UICollectionView!
     
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ class FoodTypeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
             
             
             let food = DataService.instance.getFoodType()[indexPath.row]
-            cell.updateViews(foodType: food)
+            cell.updateViews(FoodType: food)
             return cell
         }
         
@@ -40,6 +40,18 @@ class FoodTypeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
+        
+         let cuisine = DataService.instance.getFoodType()[indexPath.row]
+        performSegue(withIdentifier: "FoodTypeCell", sender: cuisine)
+        
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let cuisineVC = segue.destination as? CuisineRestVC {
+            
+            assert(sender as? FoodType != nil)
+            cuisineVC.initCuisine(cuisine: sender as! FoodType)
+        }
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

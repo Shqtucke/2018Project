@@ -11,11 +11,11 @@ import UIKit
 class FoodTypeCell: UICollectionViewCell {
     
     @IBOutlet var imageName: UIImageView!
-    @IBOutlet var foodTypeName: UILabel!
+    @IBOutlet var FoodTypeName: UILabel!
     
-    func updateViews(foodType: FoodType) {
-        imageName.image = UIImage(named: foodType.imageName)
-        foodTypeName.text = foodType.foodType
+    func updateViews(FoodType: FoodType) {
+        imageName.image = UIImage(named: FoodType.imageName)
+        FoodTypeName.text = FoodType.FoodType
     }
     
     override func draw(_ rect: CGRect) {

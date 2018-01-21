@@ -17,6 +17,9 @@
 		DC015C342012B73100D9690E /* FoodTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC015C332012B73100D9690E /* FoodTypeCell.swift */; };
 		DC015C362012B97A00D9690E /* FoodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC015C352012B97A00D9690E /* FoodType.swift */; };
 		DC015C382012BA1400D9690E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC015C372012BA1300D9690E /* DataService.swift */; };
+		DC015C3A2012DC2D00D9690E /* CuisineRestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC015C392012DC2D00D9690E /* CuisineRestVC.swift */; };
+		DC015C3C2012DD8F00D9690E /* CuisineRestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC015C3B2012DD8F00D9690E /* CuisineRestCell.swift */; };
+		DC015C3E2012E01000D9690E /* Cuisine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC015C3D2012E01000D9690E /* Cuisine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		DC015C332012B73100D9690E /* FoodTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTypeCell.swift; sourceTree = "<group>"; };
 		DC015C352012B97A00D9690E /* FoodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodType.swift; sourceTree = "<group>"; };
 		DC015C372012BA1300D9690E /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		DC015C392012DC2D00D9690E /* CuisineRestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineRestVC.swift; sourceTree = "<group>"; };
+		DC015C3B2012DD8F00D9690E /* CuisineRestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineRestCell.swift; sourceTree = "<group>"; };
+		DC015C3D2012E01000D9690E /* Cuisine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuisine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 		DC015C2D2012B36500D9690E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DC015C392012DC2D00D9690E /* CuisineRestVC.swift */,
 				DC015C312012B3C200D9690E /* FoodTypeVC.swift */,
 				DC015C1A201295F300D9690E /* HomeVC.swift */,
 			);
@@ -90,6 +97,7 @@
 		DC015C2E2012B37200D9690E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DC015C3B2012DD8F00D9690E /* CuisineRestCell.swift */,
 				DC015C332012B73100D9690E /* FoodTypeCell.swift */,
 			);
 			path = View;
@@ -98,6 +106,7 @@
 		DC015C2F2012B37D00D9690E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DC015C3D2012E01000D9690E /* Cuisine.swift */,
 				DC015C352012B97A00D9690E /* FoodType.swift */,
 			);
 			path = Model;
@@ -188,8 +197,11 @@
 				DC015C362012B97A00D9690E /* FoodType.swift in Sources */,
 				DC015C1B201295F300D9690E /* HomeVC.swift in Sources */,
 				DC015C322012B3C200D9690E /* FoodTypeVC.swift in Sources */,
+				DC015C3A2012DC2D00D9690E /* CuisineRestVC.swift in Sources */,
+				DC015C3E2012E01000D9690E /* Cuisine.swift in Sources */,
 				DC015C342012B73100D9690E /* FoodTypeCell.swift in Sources */,
 				DC015C19201295F300D9690E /* AppDelegate.swift in Sources */,
+				DC015C3C2012DD8F00D9690E /* CuisineRestCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,11 +10,11 @@ import Foundation
 
 struct FoodType {
     
-    private(set) public var foodType: String
+    private(set) public var FoodType: String
     private(set) public var imageName: String
     
-    init(foodType: String, imageName: String) {
-        self.foodType = foodType
+    init(FoodType: String, imageName: String) {
+        self.FoodType = FoodType
         self.imageName = imageName
         
     }

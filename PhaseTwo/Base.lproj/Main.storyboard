@@ -12,6 +12,7 @@
     </dependencies>
     <customFonts key="customFonts">
         <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
             <string>AvenirNext-Regular</string>
         </array>
     </customFonts>
@@ -107,12 +108,12 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="479.19999999999999" y="133.5832083958021"/>
+            <point key="canvasLocation" x="382" y="134"/>
         </scene>
-        <!--Food Type-->
+        <!--Cuisine-->
         <scene sceneID="S99-np-Pn9">
             <objects>
-                <viewController title="Food Type" id="Qvj-Oq-Ilz" customClass="FoodTypeVC" customModule="PhaseTwo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Cuisine" id="Qvj-Oq-Ilz" customClass="FoodTypeVC" customModule="PhaseTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DUX-mg-kUc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,13 +138,18 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="96o-Ep-ER2">
                                                     <rect key="frame" x="0.0" y="0.0" width="95" height="81"/>
                                                 </imageView>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pizza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vpv-gW-Vtb">
-                                                    <rect key="frame" x="0.0" y="0.0" width="95" height="21"/>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pizza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="vpv-gW-Vtb">
+                                                    <rect key="frame" x="5" y="9" width="85" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="16"/>
                                                     <nil key="textColor"/>
                                                     <color key="highlightedColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </label>
                                             </subviews>
                                         </view>
@@ -154,7 +160,7 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="96o-Ep-ER2" secondAttribute="trailing" constant="-8" id="shu-UV-6gh"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="foodTypeName" destination="vpv-gW-Vtb" id="iR5-At-7nF"/>
+                                            <outlet property="FoodTypeName" destination="vpv-gW-Vtb" id="iR5-At-7nF"/>
                                             <outlet property="imageName" destination="96o-Ep-ER2" id="Qni-VH-J1I"/>
                                         </connections>
                                     </collectionViewCell>
@@ -172,11 +178,104 @@
                     </view>
                     <connections>
                         <outlet property="restaurantCollection" destination="H8q-mi-VrC" id="qbR-Ha-GB6"/>
+                        <segue destination="r9W-vu-juL" kind="show" identifier="FoodTypeCell" id="YAF-7V-f4v"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hGb-BM-daR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128.8" y="135.38230884557723"/>
+            <point key="canvasLocation" x="1162" y="135"/>
+        </scene>
+        <!--Restaurants-->
+        <scene sceneID="aVC-iR-HpG">
+            <objects>
+                <viewController title="Restaurants" id="r9W-vu-juL" customClass="CuisineRestVC" customModule="PhaseTwo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j2t-hu-Tmd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="YIc-QS-U2F">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="sZX-mN-pSR"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yLB-JL-h3U">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CuisineRestCell" rowHeight="74" id="t43-2p-Ycr" customClass="CuisineRestCell" customModule="PhaseTwo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="74"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t43-2p-Ycr" id="6oX-Hf-PWX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="burgers" translatesAutoresizingMaskIntoConstraints="NO" id="3dD-ze-YzT">
+                                                    <rect key="frame" x="22" y="6" width="60" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="Wul-wF-Ywv"/>
+                                                        <constraint firstAttribute="width" constant="60" id="hoe-u6-e4B"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bUC-PC-fXg">
+                                                    <rect key="frame" x="90" y="11" width="210" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Nab-k3-qNG"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rub-LV-id4">
+                                                    <rect key="frame" x="90" y="40" width="210" height="21"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="rub-LV-id4" secondAttribute="trailing" constant="75" id="185-vb-ZNh"/>
+                                                <constraint firstItem="bUC-PC-fXg" firstAttribute="leading" secondItem="3dD-ze-YzT" secondAttribute="trailing" constant="8" id="3DA-6D-2Td"/>
+                                                <constraint firstItem="3dD-ze-YzT" firstAttribute="leading" secondItem="6oX-Hf-PWX" secondAttribute="leading" constant="22" id="4Fa-xf-LDu"/>
+                                                <constraint firstItem="bUC-PC-fXg" firstAttribute="top" secondItem="6oX-Hf-PWX" secondAttribute="top" constant="11" id="9QV-4n-NVX"/>
+                                                <constraint firstItem="rub-LV-id4" firstAttribute="top" secondItem="bUC-PC-fXg" secondAttribute="bottom" constant="8" id="FtN-hL-gQe"/>
+                                                <constraint firstAttribute="trailing" secondItem="bUC-PC-fXg" secondAttribute="trailing" constant="75" id="LR9-rU-l8C"/>
+                                                <constraint firstAttribute="bottom" secondItem="3dD-ze-YzT" secondAttribute="bottom" constant="7.5" id="LSI-zH-XNM"/>
+                                                <constraint firstAttribute="bottom" secondItem="rub-LV-id4" secondAttribute="bottom" constant="12.5" id="ZxI-d1-owe"/>
+                                                <constraint firstItem="rub-LV-id4" firstAttribute="leading" secondItem="3dD-ze-YzT" secondAttribute="trailing" constant="8" id="mtC-y1-laR"/>
+                                                <constraint firstItem="3dD-ze-YzT" firstAttribute="top" secondItem="6oX-Hf-PWX" secondAttribute="top" constant="6" id="n6T-kZ-dAS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageName" destination="3dD-ze-YzT" id="COg-E1-joX"/>
+                                            <outlet property="restLocation" destination="rub-LV-id4" id="VQU-r2-jN9"/>
+                                            <outlet property="restaurantName" destination="bUC-PC-fXg" id="90w-xi-wn2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yLB-JL-h3U" firstAttribute="top" secondItem="YIc-QS-U2F" secondAttribute="bottom" id="52T-Jl-BRY"/>
+                            <constraint firstItem="YIc-QS-U2F" firstAttribute="trailing" secondItem="lE6-7h-Sm6" secondAttribute="trailing" id="FOJ-jS-Lfq"/>
+                            <constraint firstItem="yLB-JL-h3U" firstAttribute="trailing" secondItem="lE6-7h-Sm6" secondAttribute="trailing" id="FU8-Wr-w5z"/>
+                            <constraint firstItem="yLB-JL-h3U" firstAttribute="leading" secondItem="lE6-7h-Sm6" secondAttribute="leading" id="Snb-hu-zIw"/>
+                            <constraint firstItem="yLB-JL-h3U" firstAttribute="top" secondItem="YIc-QS-U2F" secondAttribute="bottom" id="Stu-tB-DsF"/>
+                            <constraint firstItem="yLB-JL-h3U" firstAttribute="bottom" secondItem="lE6-7h-Sm6" secondAttribute="bottom" id="e1X-A1-UNf"/>
+                            <constraint firstItem="YIc-QS-U2F" firstAttribute="leading" secondItem="lE6-7h-Sm6" secondAttribute="leading" id="oJC-eg-P5G"/>
+                            <constraint firstItem="YIc-QS-U2F" firstAttribute="top" secondItem="lE6-7h-Sm6" secondAttribute="top" id="vYD-TD-mo7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lE6-7h-Sm6"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="yLB-JL-h3U" id="h6W-Vh-Hy0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Tw-c2-Yel" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1898.4000000000001" y="133.5832083958021"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RCR-2X-ncz">
@@ -198,6 +297,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="burgers" width="244" height="207"/>
         <image name="pizza" width="275" height="184"/>
     </resources>
 </document>
