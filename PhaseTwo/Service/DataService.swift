@@ -12,6 +12,12 @@ class DataService {
     
     static let instance = DataService()
     
+    private let website = [
+    WebPages(website: "www.apple.com"),
+    WebPages(website: "www.apple.com"),
+    WebPages(website: "www.apple.com"),
+    ]
+    
     private let foodType = [
     FoodType(FoodType: "Pizza", imageName: "pizza.jpeg"),
     FoodType(FoodType: "Burgers", imageName: "pizza.jpeg"),
@@ -46,6 +52,10 @@ class DataService {
         default:
             return getPizza()
         }
+    }
+    
+    func getWebsites() -> [WebPages] {
+        return website
     }
     
     func getPizza() -> [Cuisine] {
