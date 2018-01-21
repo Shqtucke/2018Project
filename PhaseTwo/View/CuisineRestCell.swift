@@ -22,9 +22,16 @@ class CuisineRestCell: UITableViewCell {
         restLocation.text = cuisine.restLocate
     }
     
+    override func draw(_ rect: CGRect) {
+        self.layer.cornerRadius = 15
+        
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        imageName.layer.borderColor = UIColor.white.cgColor
+        imageName.layer.borderWidth = 2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

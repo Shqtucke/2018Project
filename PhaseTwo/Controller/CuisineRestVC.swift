@@ -12,8 +12,11 @@ import SafariServices
 class CuisineRestVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var searchBar: UISearchBar!
+    
+    
     private(set) public var cuisines = [Cuisine]()
-    private(set) public var websites = ["https://www.aria.com/en.html", "https://www.caesars.com/ballys-las-vegas", "https://www.bellagio.com/en.html"]
+    private(set) public var websites = ["https://www.grimaldispizzeria.com/", "http://www.pizzarocklasvegas.com/", "https://www.tripadvisor.com/Restaurant_Review-g45963-d3546867-Reviews-Secret_Pizza-Las_Vegas_Nevada.html"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +24,21 @@ class CuisineRestVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
        tableView.delegate = self
        tableView.dataSource = self
        tableView.reloadData()
+       tableView.separatorStyle = .none
         
+        for subView in searchBar.subviews {
+            for subViewInSubView in subView.subviews {
+                if subViewInSubView.isKind(of: UITextField.self) {
+            
+                    subViewInSubView.backgroundColor = UIColor(red: 0/255, green: 122/255, blue: 255255, alpha: 1)
+                }
+            }
+        }
         
     }
     func initCuisine(cuisine: FoodType) {
-        cuisines = DataService.instance.getCuisine(forCuisineName: cuisine.imageName)
-        navigationItem.title = cuisine.imageName
+        cuisines = DataService.instance.getCuisine(forCuisineName: cuisine.FoodType)
+        navigationItem.title = cuisine.FoodType
     }
   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,6 +50,8 @@ class CuisineRestVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CuisineRestCell", for: indexPath) as? CuisineRestCell {
             
+            cell.imageName.clipsToBounds = true
+            cell.imageName.layer.cornerRadius = cell.imageName.frame.height / 2
             
             let cuisine = cuisines[indexPath.row]
             cell.updateViews(cuisine: cuisine)
@@ -49,6 +63,10 @@ class CuisineRestVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             return CuisineRestCell()
         }
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
@@ -63,7 +81,7 @@ class CuisineRestVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
             }
             
         }
-        book.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
+        book.backgroundColor = UIColor(red: 255/255, green: 149/255, blue: 0, alpha: 1)
         
         return [book]
         
