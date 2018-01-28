@@ -21,6 +21,7 @@
 		DC015C3C2012DD8F00D9690E /* CuisineRestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC015C3B2012DD8F00D9690E /* CuisineRestCell.swift */; };
 		DC015C3E2012E01000D9690E /* Cuisine.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC015C3D2012E01000D9690E /* Cuisine.swift */; };
 		DC06FD7E2014DE200077C6C6 /* WebPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC06FD7D2014DE200077C6C6 /* WebPages.swift */; };
+		DC0931A5201E797700804C04 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0931A4201E797700804C04 /* ContactVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		DC015C3B2012DD8F00D9690E /* CuisineRestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuisineRestCell.swift; sourceTree = "<group>"; };
 		DC015C3D2012E01000D9690E /* Cuisine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cuisine.swift; sourceTree = "<group>"; };
 		DC06FD7D2014DE200077C6C6 /* WebPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPages.swift; sourceTree = "<group>"; };
+		DC0931A4201E797700804C04 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 		DC015C2D2012B36500D9690E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				DC0931A4201E797700804C04 /* ContactVC.swift */,
 				DC015C392012DC2D00D9690E /* CuisineRestVC.swift */,
 				DC015C312012B3C200D9690E /* FoodTypeVC.swift */,
 				DC015C1A201295F300D9690E /* HomeVC.swift */,
@@ -198,6 +201,7 @@
 				DC015C21201295F400D9690E /* PhaseTwo.xcdatamodeld in Sources */,
 				DC015C382012BA1400D9690E /* DataService.swift in Sources */,
 				DC015C362012B97A00D9690E /* FoodType.swift in Sources */,
+				DC0931A5201E797700804C04 /* ContactVC.swift in Sources */,
 				DC06FD7E2014DE200077C6C6 /* WebPages.swift in Sources */,
 				DC015C1B201295F300D9690E /* HomeVC.swift in Sources */,
 				DC015C322012B3C200D9690E /* FoodTypeVC.swift in Sources */,
