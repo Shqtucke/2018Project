@@ -30,6 +30,7 @@ class FoodTypeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDa
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodTypeCell", for: indexPath) as? FoodTypeCell {
             
             
+            
             let food = DataService.instance.getFoodType()[indexPath.row]
             cell.updateViews(FoodType: food)
             return cell

@@ -20,17 +20,17 @@ class DataService {
     
     private let foodType = [
     FoodType(FoodType: "Pizza", imageName: "pizza.jpeg"),
-    FoodType(FoodType: "Burgers", imageName: "pizza.jpeg"),
-    FoodType(FoodType: "Italian", imageName: "pizza.jpeg"),
+    FoodType(FoodType: "Burgers", imageName: "burgers.jpeg"),
+    FoodType(FoodType: "Italian", imageName: "italian.jpeg"),
     FoodType(FoodType: "Seafood", imageName: "seafood.jpeg"),
     FoodType(FoodType: "French", imageName: "french.jpeg"),
     FoodType(FoodType: "Mexican", imageName: "mexican.jpeg"),
-    FoodType(FoodType: "Steakhouse", imageName: "pizza.jpeg"),
-    FoodType(FoodType: "Chinese", imageName: "pizza.jpeg"),
-    FoodType(FoodType: "Sushi", imageName: "pizza.jpeg"),
-    FoodType(FoodType: "Deserts", imageName: "seafood.jpeg"),
-    FoodType(FoodType: "Brazilian", imageName: "french.jpeg"),
-    FoodType(FoodType: "Bar", imageName: "mexican.jpeg"),
+    FoodType(FoodType: "Steakhouse", imageName: "steaks.jpeg"),
+    FoodType(FoodType: "Chinese", imageName: "chinese.jpeg"),
+    FoodType(FoodType: "Sushi", imageName: "sushi.jpeg"),
+    FoodType(FoodType: "Deserts", imageName: "desserts.jpeg"),
+    FoodType(FoodType: "Brazilian", imageName: "brazi.jpeg"),
+    FoodType(FoodType: "Bar", imageName: "drinks.jpeg"),
     
     ]
     

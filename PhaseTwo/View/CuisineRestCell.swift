@@ -10,8 +10,6 @@ import UIKit
 
 class CuisineRestCell: UITableViewCell {
     
-    
-   
     @IBOutlet var imageName: UIImageView!
     @IBOutlet var restaurantName: UILabel!
     @IBOutlet var restLocation: UILabel!
@@ -34,10 +32,6 @@ class CuisineRestCell: UITableViewCell {
         imageName.layer.borderWidth = 2
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
+    //View: The objects that are in charge of the visual representation of the Model and the controls the user can interact with; basically, all the UIView derived objects.
 
 }

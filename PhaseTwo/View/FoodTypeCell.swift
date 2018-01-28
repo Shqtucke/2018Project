@@ -21,6 +21,11 @@ class FoodTypeCell: UICollectionViewCell {
     override func draw(_ rect: CGRect) {
         self.layer.cornerRadius = 15
         
+        
+    }
+    
+    override func awakeFromNib() {
+        imageName.layer.cornerRadius = 15
     }
     
     

@@ -18,5 +18,10 @@ struct Cuisine {
         self.restName = restName
         self.restLocate = restLocate
     }
-    
-}
+
+    }
+
+
+
+//Model View Controller
+//Model: The objects that hold your application data and define how to manipulate it.
