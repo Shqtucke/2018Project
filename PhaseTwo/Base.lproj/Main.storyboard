@@ -234,10 +234,10 @@
             </objects>
             <point key="canvasLocation" x="676" y="837.93103448275872"/>
         </scene>
-        <!--View Controller-->
+        <!--Add ContactVC-->
         <scene sceneID="T7x-4T-Xpg">
             <objects>
-                <viewController id="Ji5-Mf-yrt" sceneMemberID="viewController">
+                <viewController id="Ji5-Mf-yrt" customClass="AddContactVC" customModule="PhaseTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ov3-KW-MPC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -259,6 +259,9 @@
                                 <state key="normal" title="Select">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="Ji5-Mf-yrt" eventType="touchUpInside" id="X0I-aY-ZYl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sm-2d-uqI">
                                 <rect key="frame" x="58" y="248" width="260" height="33"/>
@@ -270,7 +273,7 @@
                                 <color key="textColor" red="0.10141725093126297" green="0.47988539934158325" blue="0.99918466806411743" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s1y-0s-Z1M">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First and Last" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s1y-0s-Z1M">
                                 <rect key="frame" x="58" y="289" width="260" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="466-3u-q9j"/>
@@ -278,7 +281,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone Number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgY-jf-ha5">
                                 <rect key="frame" x="58" y="347" width="260" height="33"/>
@@ -290,14 +293,14 @@
                                 <color key="textColor" red="0.10141725090000001" green="0.47988539930000002" blue="0.99918466809999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfL-Wg-FTr">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Area Code first" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pfL-Wg-FTr">
                                 <rect key="frame" x="58" y="388" width="260" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="260" id="BTp-rw-5OI"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1O5-tY-buh">
                                 <rect key="frame" x="0.0" y="579" width="375" height="88"/>
@@ -309,6 +312,9 @@
                                 <state key="normal" title="Save Contact">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveContact:" destination="Ji5-Mf-yrt" eventType="touchUpInside" id="8BW-tW-meF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -338,6 +344,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bfU-Wp-g1e"/>
                     </view>
+                    <connections>
+                        <outlet property="contactImgView" destination="XQW-VA-zU8" id="yUs-4X-Zx7"/>
+                        <outlet property="nameTextfield" destination="s1y-0s-Z1M" id="7ju-Xs-M3x"/>
+                        <outlet property="phoneTextfield" destination="pfL-Wg-FTr" id="FEQ-mI-hnb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grl-f4-m0s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
