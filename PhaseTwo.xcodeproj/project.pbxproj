@@ -46,6 +46,7 @@
 		DC0931A4201E797700804C04 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
 		DC1B67F9201FDBC800B3F08A /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		DC1B67FB201FDD0500B3F08A /* AddContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactVC.swift; sourceTree = "<group>"; };
+		DC820AC720227FAD00A78A4B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +65,7 @@
 			children = (
 				DC015C17201295F300D9690E /* PhaseTwo */,
 				DC015C16201295F300D9690E /* Products */,
+				DC820AC620227FAC00A78A4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +132,14 @@
 				DC015C372012BA1300D9690E /* DataService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		DC820AC620227FAC00A78A4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC820AC720227FAD00A78A4B /* MessageUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
