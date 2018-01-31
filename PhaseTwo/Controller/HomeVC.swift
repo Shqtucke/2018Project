@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, MFMessageComposeViewControllerDelegate {
     
     @IBOutlet var menuButtons: [UIButton]!
     
@@ -72,8 +73,42 @@ class HomeVC: UIViewController {
             }
         }
     }
+    @IBAction func callAction(_ sender: Any) {
+        
+        let url: NSURL = URL(string: "TEL://8039316898")! as NSURL
+        UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+    }
     
+    @IBAction func messageAction(_ sender: Any) {
+        
+        if MFMessageComposeViewController.canSendText() {
+            let controller = MFMessageComposeViewController()
+            controller.body = "Message Body"
+            controller.recipients = ["8033915695"]
+            controller.messageComposeDelegate = self
+            self.present(controller, animated: true, completion: nil)
+            
+        } else {
+            print("Cannot send TEXT")
+        }
+    }
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        self.dismiss(animated: true, completion: nil)
+        
+    }
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
 
