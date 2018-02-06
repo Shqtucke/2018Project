@@ -49,7 +49,7 @@
 	<array>
 		<dict>
 			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER).Conceirge</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).conceirge</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Conceirge</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
@@ -59,7 +59,7 @@
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER).Restaurants</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).restaurant</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Restaurants</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
@@ -69,7 +69,7 @@
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER).Airport</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).airport</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Airport</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
@@ -79,7 +79,7 @@
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemType</key>
-			<string>$(PRODUCT_BUNDLE_IDENTIFIER).Casinos</string>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).casino</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Casinos</string>
 			<key>UIApplicationShortcutItemSubtitle</key>

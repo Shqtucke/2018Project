@@ -31,6 +31,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
     }
+    
+    enum ShortcutType : String {
+        case conceirge = "conceirge"
+        case restaurant = "restaurant"
+        case airport = "airport"
+        case casino = "casino"
+    }
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        print(shortcutItem.type)
+        
+        if let type = shortcutItem.type.components(separatedBy: ".").last {
+            
+            switch type {
+            case ShortcutType.airport.rawValue:
+                print("welcome to the airport")
+            case ShortcutType.casino.rawValue:
+                print("gamble at your own risk")
+            case ShortcutType.conceirge.rawValue:
+                print("locate your personal conceirge")
+            case ShortcutType.restaurant.rawValue:
+                print("let's eat!")
+                
+            default:
+                print("welcome to the airport")
+            }
+        }
+    }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
