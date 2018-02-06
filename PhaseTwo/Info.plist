@@ -45,5 +45,48 @@
 	<string>Conceirge needs your permission to access your photo library.</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>Conceirge needs your permission to access your photo library.</string>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).Conceirge</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Conceirge</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>personal conceirge</string>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeContact</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).Restaurants</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Restaurants</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>love for food</string>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeLove</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).Airport</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Airport</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>all Transporation</string>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeCloud</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>$(PRODUCT_BUNDLE_IDENTIFIER).Casinos</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Casinos</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>casino restaurants</string>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeHome</string>
+		</dict>
+	</array>
 </dict>
 </plist>
