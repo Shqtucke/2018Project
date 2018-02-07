@@ -391,7 +391,7 @@
         <!--Cuisine-->
         <scene sceneID="S99-np-Pn9">
             <objects>
-                <viewController title="Cuisine" id="Qvj-Oq-Ilz" customClass="FoodTypeVC" customModule="PhaseTwo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="foodTypeVC" title="Cuisine" id="Qvj-Oq-Ilz" customClass="FoodTypeVC" customModule="PhaseTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DUX-mg-kUc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -469,7 +469,7 @@
         <!--Restaurants-->
         <scene sceneID="aVC-iR-HpG">
             <objects>
-                <viewController title="Restaurants" id="r9W-vu-juL" customClass="CuisineRestVC" customModule="PhaseTwo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="restaurantVC" title="Restaurants" id="r9W-vu-juL" customClass="CuisineRestVC" customModule="PhaseTwo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j2t-hu-Tmd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

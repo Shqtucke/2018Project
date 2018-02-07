@@ -13,10 +13,16 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var vcsArray = [UIViewController]()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let foodVC = storyboard.instantiateViewController(withIdentifier: "foodTypeVC") as! FoodTypeVC
+        let restVC = storyboard.instantiateViewController(withIdentifier: "restaurantVC") as! CuisineRestVC
+        
+        vcsArray = [foodVC, restVC]
         
         UINavigationBar.appearance().barTintColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1)
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
@@ -43,20 +49,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if let type = shortcutItem.type.components(separatedBy: ".").last {
             
+            let navVC = window?.rootViewController as! UINavigationController
+            navVC.setViewControllers(vcsArray, animated: false)
+            
             switch type {
             case ShortcutType.airport.rawValue:
-                print("welcome to the airport")
+                navVC.popToViewController(vcsArray[1], animated: true)
+                completionHandler(true)
+                
             case ShortcutType.casino.rawValue:
-                print("gamble at your own risk")
+                navVC.popToViewController(vcsArray[0], animated: true)
+                completionHandler(true)
+                
             case ShortcutType.conceirge.rawValue:
-                print("locate your personal conceirge")
+                navVC.popToViewController(vcsArray[1], animated: true)
+                completionHandler(true)
+                
             case ShortcutType.restaurant.rawValue:
-                print("let's eat!")
+                navVC.popToViewController(vcsArray[0], animated: true)
+                completionHandler(true)
+                
                 
             default:
-                print("welcome to the airport")
+                navVC.popToRootViewController(animated: true)
+                completionHandler(true)
             }
         }
+        
+        completionHandler(false)
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
