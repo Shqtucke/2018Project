@@ -21,8 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let foodVC = storyboard.instantiateViewController(withIdentifier: "foodTypeVC") as! FoodTypeVC
         let restVC = storyboard.instantiateViewController(withIdentifier: "restaurantVC") as! CuisineRestVC
+        let homeVC = storyboard.instantiateViewController(withIdentifier: "homeVC") as! HomeVC
         
-        vcsArray = [foodVC, restVC]
+        vcsArray = [foodVC, restVC, homeVC]
         
         UINavigationBar.appearance().barTintColor = UIColor(red: 0/255, green: 122/255, blue: 255/255, alpha: 1)
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
@@ -58,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 completionHandler(true)
                 
             case ShortcutType.casino.rawValue:
-                navVC.popToViewController(vcsArray[0], animated: true)
+                navVC.popToViewController(vcsArray[2], animated: true)
                 completionHandler(true)
                 
             case ShortcutType.conceirge.rawValue:
@@ -66,13 +67,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 completionHandler(true)
                 
             case ShortcutType.restaurant.rawValue:
-                navVC.popToViewController(vcsArray[0], animated: true)
+                navVC.popToViewController(vcsArray[2], animated: true)
                 completionHandler(true)
                 
                 
             default:
-                navVC.popToRootViewController(animated: true)
+                navVC.popToViewController(vcsArray[2], animated: true)
                 completionHandler(true)
+//                navVC.popToRootViewController(animated: true)
+//                completionHandler(true)
             }
         }
         
